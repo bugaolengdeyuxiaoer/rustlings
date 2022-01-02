@@ -6,7 +6,6 @@
 //    list_of_results functions.
 // Execute `rustlings hint iterators3` to get some hints!
 
-// I AM NOT DONE
 
 #[derive(Debug, PartialEq, Eq)]
 pub enum DivisionError {
@@ -49,7 +48,7 @@ fn result_with_list() -> Result<Vec<i32>,DivisionError> {
 fn list_of_results() -> Vec<Result<i32,DivisionError>> {
     let numbers = vec![27, 297, 38502, 81];
     let division_results = numbers.into_iter().map(|n| divide(n, 27));
-    let x : Vec<Result<i32>,DivisionError> = division_results.collect();
+    let x : Vec<Result<i32,DivisionError>> = division_results.collect();
     x
 }
 
